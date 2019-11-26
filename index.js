@@ -106,7 +106,9 @@ const dayNumbersHTML = (gray, normal, firstDay) => {
     const tablizedHTML = tablize(grayHTML.concat(normalHTML));
     return tablizedHTML;
   } else {
-    return tablize(normal.map(day => `<th>${day}</th>`));
+    return tablize(
+      normal.map(day => `<th class="normalNumber day${day}">${day}</th>`)
+    );
   }
 };
 
@@ -120,8 +122,7 @@ function buildHTML(month, year) {
 
   return {
     dayHeaders,
-    numbersHTML,
-    year
+    numbersHTML
   };
 }
 
@@ -213,20 +214,23 @@ $(document).ready(() => {
   };
 
   const setKalunder = dateObj => {
-    const { numbersHTML, year } = buildHTML(dateObj.month, dateObj.year);
+    const { numbersHTML } = buildHTML(dateObj.month, dateObj.year);
     $("#monthNameRoof").html(select);
     $("#kalYear").html(yearSelect);
     $(`#select${monthNames[dateObj.month]}`).attr("selected", "selected");
+    $(`#select${dateObj.year}`).attr("selected", "selected");
     $("#dayHeaders").html(dayHeaders());
     $("#dayNumbers").html(numbersHTML);
     $(`.day${dateObj.day}`).addClass("selected");
     $(".timeBox .timeText").html(dateObj.writtenDate);
+    $("#kalTime").attr("value", dateObj.hour + ":" + dateObj.minutes);
   };
 
   const setKalDaysOnly = dateObj => {
     const { numbersHTML } = buildHTML(dateObj.month, dateObj.year);
     $("#dayNumbers").html(numbersHTML);
     $(`.day${dateObj.day}`).addClass("selected");
+    return attachListeners();
   };
 
   setKalunder(time);
@@ -267,7 +271,8 @@ $(document).ready(() => {
     });
 
     $("#kalSubmit").click(() => {
-      kalToggle();
+      $("#kalunder").hide();
+      $("#kalSubmit").hide();
       setKalunder(time);
     });
   };
@@ -282,8 +287,8 @@ $(document).ready(() => {
 
   $("#kalToggle").click(() => {
     kalToggle();
-    if ($("#kalunder").is(":visible")) {
-      attachListeners();
-    }
+    // if ($("#kalunder").is(":visible")) {
+    attachListeners();
+    // }
   });
 });

@@ -2,6 +2,7 @@ body {
   font-family: "Open Sans", sans-serif;
   margin-left: 100px;
   margin-top: 100px;
+  color: #030405;
 }
 
 #kalJson {
@@ -17,7 +18,7 @@ body {
 }
 
 .kalunderTextContainer {
-  background-color: #EDF4ED;
+  background-color: #ECEFF4;
   height: 25px;
   width: 200px;
   display: -webkit-box;
@@ -44,21 +45,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FFF07C;
+  background-color: #A3BE8C;
 }
 
 .kalunderTextContainer .calendarIcon:hover {
-  background-color: #ffe730;
+  background-color: #EBCB8B;
 }
 
 #kalunder {
   width: 200px;
-  background-color: #EDF4ED;
-  border: 1px solid black;
+  background-color: #ECEFF4;
+  border: 1px solid #3B4252;
 }
 
 #kalunder th, #kalunder .roofContainer {
-  border: 1px solid black;
+  border: 1px solid #3B4252;
 }
 
 #kalunder #tableBody th {
@@ -74,7 +75,7 @@ body {
   line-height: 25px;
   width: 100%;
   height: 34px;
-  background-color: #66a989;
+  background-color: #8FBCBB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,16 +117,16 @@ body {
 }
 
 #kalunder .selected {
-  background-color: #ffe730;
-  border-color: #af9b00;
+  background-color: #EBCB8B;
+  border-color: #EBCB8B;
 }
 
 #kalunder #dayHeaders {
-  background-color: #87BBA2;
+  background-color: #A3BE8C;
 }
 
 #kalunder .grayNumber {
-  background-color: #aab6bb;
+  background-color: #B48EAD;
 }
 
 #kalunder .normalNumber {
@@ -138,7 +139,7 @@ body {
   font-family: 'Open Sans';
   padding-left: 26px;
   padding-bottom: 2px;
-  border: 1px solid black;
+  border: 1px solid #3B4252;
   font-size: 15px;
   font-weight: 600;
   text-align: center;
@@ -156,24 +157,24 @@ body {
   border-radius: 3px;
   height: 24px;
   padding-top: 2px;
-  background-color: #fcdf00;
+  background-color: #EBCB8B;
   -webkit-transition-delay: .2s;
           transition-delay: .2s;
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-box-shadow: 4px 3px 11px 0 #af9b00;
-          box-shadow: 4px 3px 11px 0 #af9b00;
+  -webkit-box-shadow: 4px 3px 11px 0 #EBCB8B;
+          box-shadow: 4px 3px 11px 0 #EBCB8B;
 }
 
 .kalbtntext:hover {
-  background-color: #e2c800;
-  -webkit-box-shadow: 4px 3px 11px 0 #af9b00;
-          box-shadow: 4px 3px 11px 0 #af9b00;
+  background-color: #efd5a1;
+  -webkit-box-shadow: 4px 3px 11px 0 #EBCB8B;
+          box-shadow: 4px 3px 11px 0 #EBCB8B;
 }
 
 .kalbtntext:active {
-  background-color: #ffe730;
-  -webkit-box-shadow: 4px 3px 11px 0 #af9b00;
-          box-shadow: 4px 3px 11px 0 #af9b00;
+  background-color: #f5e4c4;
+  -webkit-box-shadow: 4px 3px 11px 0 #EBCB8B;
+          box-shadow: 4px 3px 11px 0 #EBCB8B;
 }
 /*# sourceMappingURL=index.css.map */

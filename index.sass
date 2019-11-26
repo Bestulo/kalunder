@@ -1,14 +1,15 @@
-// @import "node_modules/nord/src/nord.scss"
+@import "nord.scss"
 
-$white: #EDF4ED
-$green: #87BBA2
-$gray: #7A8C95
-$yellow: #FFF07C
+// $white: #EDF4ED
+// $green: #87BBA2
+// $gray: #7A8C95
+// $yellow: #FFF07C
 
 body
   font-family: "Open Sans", sans-serif
   margin-left: 100px
   margin-top: 100px
+  color: darken($nord0,20)
 
 $cellHeight: 25px
 $kalWidth: 200px
@@ -25,7 +26,7 @@ $kalWidth: 200px
   -khtml-user-select: none
 
 .kalunderTextContainer
-  background-color: $white
+  background-color: $nord6
   height: 25px
   width: $kalWidth
   display: flex
@@ -40,18 +41,18 @@ $kalWidth: 200px
     display: flex
     justify-content:  center
     align-items: center
-    background-color: $yellow
+    background-color: $nord14
     &:hover
-      background-color: darken($yellow, 15)
+      background-color: $nord13
 
 
 #kalunder
   width: $kalWidth
-  background-color: $white
-  border: 1px solid black
+  background-color: $nord6
+  border: 1px solid $nord1
 
   th, .roofContainer
-    border: 1px solid black
+    border: 1px solid $nord1
 
   #tableBody th
     width: 30px
@@ -65,7 +66,8 @@ $kalWidth: 200px
     line-height: $cellHeight
     width: 100%
     height: 34px
-    background-color: darken($green,10)
+    // background-color: $nord14
+    background-color: $nord7
     display: flex
     align-items: center
     div
@@ -95,14 +97,14 @@ $kalWidth: 200px
       display: flex
       justify-self: end
   .selected
-    background-color: darken($yellow, 15)
-    border-color: darken($yellow, 40)
+    background-color: $nord13
+    border-color: $nord13
 
   #dayHeaders
-    background-color: $green
+    background-color: $nord14
 
   .grayNumber
-    background-color: lighten($gray,17)
+    background-color: $nord15
 
   .normalNumber
     cursor: pointer
@@ -113,7 +115,7 @@ $kalWidth: 200px
     font-family: 'Open Sans'
     padding-left: 26px
     padding-bottom: 2px
-    border: 1px solid black
+    border: 1px solid $nord1
     font-size: 15px
     font-weight: 600
     text-align: center
@@ -129,13 +131,13 @@ $kalWidth: 200px
   border-radius: 3px
   height: $cellHeight - 1
   padding-top: 2px
-  background-color: darken($yellow,25)
+  background-color: $nord13
   transition-delay: .2s
   transition: .3s
-  box-shadow: 4px 3px 11px 0 darken($yellow,40)
+  box-shadow: 4px 3px 11px 0 $nord13
   &:hover
-    background-color: darken($yellow,30)
-    box-shadow: 4px 3px 11px 0 darken($yellow,40)
+    background-color: lighten($nord13,5)
+    box-shadow: 4px 3px 11px 0 $nord13
   &:active
-    background-color: darken($yellow,15)
-    box-shadow: 4px 3px 11px 0 darken($yellow,40)
+    background-color: lighten($nord13, 13)
+    box-shadow: 4px 3px 11px 0 $nord13
