@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:600|Open+Sans:600&display=swap"
+      rel="stylesheet"
+    /> -->
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="timeBox">
+      <div class="kalunderTextContainer">
+        <div class="timeText">19/11/2019 7:22 AM</div>
+        <div class="calendarIcon" id="kalToggle">
+          <span class="unselectable">🗓️</span>
+        </div>
+      </div>
+      <div id="kalunder">
+        <div id="kalunder-body" class="unselectable">
+          <div class="roofContainer">
+            <div id="kalYear">year</div>
+          </div>
+          <div class="roofContainer">
+            <div id="monthNameRoof">roof</div>
+          </div>
+          <div id="tableBody">
+            <div id="dayHeaders">dayHeaders</div>
+            <div id="dayNumbers">dayNumbers</div>
+            <div id="hhmm">
+              <input id="kalTime" type="time" name="calTime" value="13:30" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kalbtn" id="kalSubmit" class="unselectable">
+        <div class="kalbtntext">Set time</div>
+      </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

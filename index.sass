@@ -1,0 +1,141 @@
+// @import "node_modules/nord/src/nord.scss"
+
+$white: #EDF4ED
+$green: #87BBA2
+$gray: #7A8C95
+$yellow: #FFF07C
+
+body
+  font-family: "Open Sans", sans-serif
+  margin-left: 100px
+  margin-top: 100px
+
+$cellHeight: 25px
+$kalWidth: 200px
+
+// .timeText
+//   width: $kalWidth + 2
+
+#kalJson
+  display: none
+
+.unselectable
+  user-select: none
+  -moz-user-select: none
+  -khtml-user-select: none
+
+.kalunderTextContainer
+  background-color: $white
+  height: 25px
+  width: $kalWidth
+  display: flex
+  align-items: center
+  padding-left: 4px
+  .calendarIcon
+    cursor: pointer
+    font-size: 20px
+    margin-left: auto
+    width: 25px
+    height: 25px
+    display: flex
+    justify-content:  center
+    align-items: center
+    background-color: $yellow
+    &:hover
+      background-color: darken($yellow, 15)
+
+
+#kalunder
+  width: $kalWidth
+  background-color: $white
+  border: 1px solid black
+
+  th, .roofContainer
+    border: 1px solid black
+
+  #tableBody th
+    width: 30px
+    height: $cellHeight
+    font-family: 'Open Sans'
+
+  .roofContainer
+    font-family: Merriweather
+    letter-spacing: 1px
+    font-weight: 600
+    line-height: $cellHeight
+    width: 100%
+    height: 34px
+    background-color: darken($green,10)
+    display: flex
+    align-items: center
+    div
+      margin-top: -1px !important
+      margin-right: auto
+      margin-left: auto
+      select
+        cursor: pointer
+    #monthNameRoof
+      display:flex
+      justify-self: center
+      // margin-left: auto
+      // margin-right: 4px
+      select
+        // appearance: none
+        // padding-top: 3px
+        // padding-bottom: 3px
+        // padding-left: 5px
+        // width: 88px
+    .leftArrow
+      margin-left: 5px
+      display: flex
+      justify-self: start
+    .rightArrow
+      margin-right: 5px
+      margin-left: auto
+      display: flex
+      justify-self: end
+  .selected
+    background-color: darken($yellow, 15)
+    border-color: darken($yellow, 40)
+
+  #dayHeaders
+    background-color: $green
+
+  .grayNumber
+    background-color: lighten($gray,17)
+
+  .normalNumber
+    cursor: pointer
+
+  #kalTime
+    cursor: pointer
+    height: $cellHeight
+    font-family: 'Open Sans'
+    padding-left: 26px
+    padding-bottom: 2px
+    border: 1px solid black
+    font-size: 15px
+    font-weight: 600
+    text-align: center
+    width: 100%
+
+.kalbtn
+  border: none
+  cursor: pointer
+  text-align: center
+
+.kalbtntext
+  width: $kalWidth+2
+  border-radius: 3px
+  height: $cellHeight - 1
+  padding-top: 2px
+  background-color: darken($yellow,25)
+  transition-delay: .2s
+  transition: .3s
+  box-shadow: 4px 3px 11px 0 darken($yellow,40)
+  &:hover
+    background-color: darken($yellow,30)
+    box-shadow: 4px 3px 11px 0 darken($yellow,40)
+  &:active
+    background-color: darken($yellow,15)
+    box-shadow: 4px 3px 11px 0 darken($yellow,40)
