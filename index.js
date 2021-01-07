@@ -197,11 +197,11 @@ $(document).ready(() => {
   // less than 10, a 0 is needed for formatting (01, 09, etc.)
 
   const addConditional0 = num => (num < 10 ? "0" + num : num);
-
+  
   const dateFromObject = obj => {
-    const str = `${time.year}-${addConditional0(
-      time.month + 1
-    )}-${addConditional0(time.day)}T${time.hour}:${time.minutes}`;
+    const str = `${obj.year}-${addConditional0(
+      obj.month + 1
+    )}-${addConditional0(obj.day)}T${addConditional0(obj.hour)}:${addConditional0(obj.minutes)}`;
     const date = new Date(str);
     return date;
   };
